@@ -12,7 +12,7 @@
             <input type="text" name="body">
             <input type="submit" value="投稿">
         </form>
-        <hr> 
+        <hr>
         <ul>
             @foreach ($messages as $message)
                 <li>{{ $message->body }}</li>
