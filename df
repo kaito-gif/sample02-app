@@ -1,0 +1,85 @@
+[90m= [39m[34;4mIlluminate\Database\Eloquent\Collection[39;24m {#6459
+    [34mall[39m: [
+      [34;4mApp\Models\Author[39;24m {#6035
+        [34mid[39m: [35m1[39m,
+        [34mname[39m: "[32mReyna Schamberger Jr.[39m",
+        [34mcreated_at[39m: "[32m2025-11-02 03:33:13[39m",
+        [34mupdated_at[39m: "[32m2025-11-02 03:33:13[39m",
+        [34mdetail[39m: [34;4mApp\Models\AuthorDetail[39;24m {#6451
+          [34mauthor_id[39m: [35m1[39m,
+          [34memail[39m: "[32mverdie04@example.org[39m",
+          [34maddress[39m: """
+            [32m9590 Bednar Track[39m\n
+            [32mKunzeshire, NC 43466[39m
+            """,
+          [34mcreated_at[39m: "[32m2025-11-02 03:33:13[39m",
+          [34mupdated_at[39m: "[32m2025-11-02 03:33:13[39m",
+        },
+      },
+      [34;4mApp\Models\Author[39;24m {#6036
+        [34mid[39m: [35m2[39m,
+        [34mname[39m: "[32mDr. Geoffrey Schaefer Jr.[39m",
+        [34mcreated_at[39m: "[32m2025-11-02 03:33:13[39m",
+        [34mupdated_at[39m: "[32m2025-11-02 03:33:13[39m",
+        [34mdetail[39m: [34;4mApp\Models\AuthorDetail[39;24m {#6450
+          [34mauthor_id[39m: [35m2[39m,
+          [34memail[39m: "[32mharvey70@example.net[39m",
+          [34maddress[39m: """
+            [32m947 Damian Springs Apt. 701[39m\n
+            [32mNorth Kayleigh, AZ 87837-7844[39m
+            """,
+          [34mcreated_at[39m: "[32m2025-11-02 03:33:13[39m",
+          [34mupdated_at[39m: "[32m2025-11-02 03:33:13[39m",
+        },
+      },
+      [34;4mApp\Models\Author[39;24m {#6037
+        [34mid[39m: [35m3[39m,
+        [34mname[39m: "[32mMs. Nikki Stiedemann IV[39m",
+        [34mcreated_at[39m: "[32m2025-11-02 03:33:13[39m",
+        [34mupdated_at[39m: "[32m2025-11-02 03:33:13[39m",
+        [34mdetail[39m: [34;4mApp\Models\AuthorDetail[39;24m {#6449
+          [34mauthor_id[39m: [35m3[39m,
+          [34memail[39m: "[32mjaycee40@example.org[39m",
+          [34maddress[39m: """
+            [32m925 Keon Harbors[39m\n
+            [32mWest Yvette, TX 21788-9747[39m
+            """,
+          [34mcreated_at[39m: "[32m2025-11-02 03:33:13[39m",
+          [34mupdated_at[39m: "[32m2025-11-02 03:33:13[39m",
+        },
+      },
+      [34;4mApp\Models\Author[39;24m {#6038
+        [34mid[39m: [35m4[39m,
+        [34mname[39m: "[32mCristal O'Kon[39m",
+        [34mcreated_at[39m: "[32m2025-11-02 03:33:13[39m",
+        [34mupdated_at[39m: "[32m2025-11-02 03:33:13[39m",
+        [34mdetail[39m: [34;4mApp\Models\AuthorDetail[39;24m {#6448
+          [34mauthor_id[39m: [35m4[39m,
+          [34memail[39m: "[32mkohler.hope@example.com[39m",
+          [34maddress[39m: """
+            [32m64232 Dena Mount[39m\n
+            [32mDachstad, PA 62042[39m
+            """,
+          [34mcreated_at[39m: "[32m2025-11-02 03:33:13[39m",
+          [34mupdated_at[39m: "[32m2025-11-02 03:33:13[39m",
+        },
+      },
+      [34;4mApp\Models\Author[39;24m {#6039
+        [34mid[39m: [35m5[39m,
+        [34mname[39m: "[32mEvie Quigley PhD[39m",
+        [34mcreated_at[39m: "[32m2025-11-02 03:33:13[39m",
+        [34mupdated_at[39m: "[32m2025-11-02 03:33:13[39m",
+        [34mdetail[39m: [34;4mApp\Models\AuthorDetail[39;24m {#6447
+          [34mauthor_id[39m: [35m5[39m,
+          [34memail[39m: "[32mnoble28@example.org[39m",
+          [34maddress[39m: """
+            [32m5909 Rosenbaum Shoals Suite 965[39m\n
+            [32mSouth Felipaberg, WI 02773-6656[39m
+            """,
+          [34mcreated_at[39m: "[32m2025-11-02 03:33:13[39m",
+          [34mupdated_at[39m: "[32m2025-11-02 03:33:13[39m",
+        },
+      },
+    ],
+  }
+
