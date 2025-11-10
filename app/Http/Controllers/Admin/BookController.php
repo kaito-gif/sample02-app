@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Http\Requests\BookPostRequest;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\View\View;
 use App\Models\Book;
@@ -40,7 +40,7 @@ class BookController extends Controller
         ]);
     }
 
-    public function store(Request $request): Book
+    public function store(BookPostRequest $request): Book
     {
         // 書籍データ登録用のオブジェクトを作成する
         $book = new Book();
