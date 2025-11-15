@@ -27,13 +27,10 @@ class BookController extends Controller
                 ->header('Content-Type', 'text/html; charset=UTF-8');
     }
 
-    public function show(string $id): Book
+    public function show(Book $book): View
     {
-        // 書籍を一件取得
-        $book = Book::findOrFail($id);
-
         // 取得した書籍をレスポンスとして返す
-        return $book;
+        return view('admin/book/show', compact('book'));
     }
 
     public function create(): View
