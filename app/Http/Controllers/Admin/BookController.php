@@ -4,10 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\BookPostRequest;
-use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
+use App\Models\Author;
 use App\Models\Book;
 use App\Models\Category;
 
@@ -25,12 +26,12 @@ class BookController extends Controller
         return response()
                 ->view('admin.book.index', ['books' => $books])
                 ->header('Content-Type', 'text/html; charset=UTF-8');
-    }
+        }
 
     public function show(Book $book): View
     {
         // 取得した書籍をレスポンスとして返す
-        return view('admin/book/show', compact('book'));
+        return view('admin.book.show', compact('book'));
     }
 
     public function create(): View
@@ -38,10 +39,11 @@ class BookController extends Controller
         // ビューにカテゴリー一覧を表示するために全件取得
         $categories = Category::all();
 
-        // ビューオブジェクトを返す
-        return view('admin.book.create',[
-            'categories' => $categories
-        ]);
+        // 著者一覧を表示するために全件取得
+        $authors = Author::all();
+
+        return view('admin.book.create',
+            compact('categories', 'authors'));
     }
 
     public function store(BookPostRequest $request): RedirectResponse
@@ -54,8 +56,13 @@ class BookController extends Controller
         $book->title = $request->title;
         $book->price = $request->price;
 
-        // 保存
-        $book->save();
+        DB::transaction(function() use($book, $request){
+            // 保存
+            $book->save();
+
+            // 著者書籍テーブルを登録
+            $book->authors()->attach($request->author_ids);
+        });
 
         // 登録完了後book.indexにリダイレクトする
         return redirect(route('book.index'))->with('message', $book->title . 'を追加しました。');
