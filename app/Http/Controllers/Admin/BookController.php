@@ -27,7 +27,7 @@ class BookController extends Controller
         return response()
                 ->view('admin.book.index', ['books' => $books])
                 ->header('Content-Type', 'text/html; charset=UTF-8');
-        }
+    }
 
     public function show(Book $book): View
     {
@@ -99,5 +99,13 @@ class BookController extends Controller
         });
 
         return redirect(route('book.index'))->with('message', $book->title . 'を変更しました。');
+    }
+
+    public function destroy(Book $book): RedirectResponse
+    {
+        // 削除
+        $book->delete();
+
+        return redirect(route('book.index'))->with('message', $book->title . 'を削除しました。');
     }
 }
